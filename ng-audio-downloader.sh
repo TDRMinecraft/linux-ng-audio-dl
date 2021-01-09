@@ -1,15 +1,16 @@
 #!/bin/bash
 # Init
-#  main
+# main
 printf "\033c"
 
 # Avoid errors
 rm -r temp 2> /dev/null
-#  Trap
+# Trap
 sleep 0.1
 trap 'echo -e "${LIGHTRED}An error occured! Check the song id and your internet connection!" && echo -e "${LIGHTRED}Exiting..." && sleep 4 && exit 1' ERR
+# End "Trap"
 
-#  Colors
+# Colors
 NC='\033[0m'
 RED='\033[0;31m'
 LIGHTRED='\033[1;31m'
@@ -18,7 +19,8 @@ LIGHTGREEN='\033[1;32m'
 YELLOW='\033[1;33m'
 LIGHTCYAN='\033[1;36m'
 WHITE='\033[1;37m'
-# End Init
+# End "Colors"
+# End "Init"
 
 echo -e "${LIGHTCYAN}Please enter the Song ID:${NC}"
 read songid
